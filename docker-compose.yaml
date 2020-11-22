@@ -1,0 +1,13 @@
+---
+version: '3.8'
+
+services:
+  haskell:
+    image: haskell:8
+    container_name: haskell
+    hostname: haskell
+    working_dir: /var/local/app/
+    volumes:
+      - type: bind
+        source: ${PWD}/app/
+        target: /var/local/app/
